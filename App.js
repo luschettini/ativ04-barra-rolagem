@@ -10,8 +10,6 @@ export default function App() {
     { id: "5", title: "Lilás" },
     { id: "6", title: "Rosa Claro" },
     { id: "7", title: "Vermelho" },
-    { id: "8", title: "Laranja" },
-    { id: "9", title: "Salmão" },
   ];
 
   const renderItem = ({ item }) => (
@@ -23,9 +21,9 @@ export default function App() {
   return (
     <SafeAreaView>
       <ScrollView>
-        {data.map((item) => (
-          <View key={item.id} style={styles.item}>
-            <Text style={styles.title}>{item.title}</Text>
+        {data.map((item2) => (
+          <View key={item2.id} style={styles.item2}>
+            <Text style={styles.title}>{item2.title}</Text>
           </View>
         ))}
       </ScrollView>
@@ -50,6 +48,14 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     marginHorizontal: 16,
     borderRadius: 80,
+  },
+  item2: {
+    backgroundColor: "#a096ff",
+    padding: 20,
+    marginVertical: 8,
+    marginHorizontal: 16,
+    borderRadius: 80,
+    maxHeight: 70,
   },
   title: {
     fontSize: 16,
